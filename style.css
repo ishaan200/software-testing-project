@@ -1,4 +1,8 @@
 /* General page styling */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -9,8 +13,11 @@ body {
 
 /* Navbar styling */
 .navbar {
+    position: sticky;
+    top: 0;
     background-color: #2c3e50;
     padding: 15px;
+    z-index: 1000;
 }
 
 .navbar ul {
@@ -34,6 +41,12 @@ body {
 
 .navbar a:hover {
     color: #f39c12;            /* hover effect */
+}
+
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
 }
 
 .profile {
@@ -72,6 +85,44 @@ p {
 ul {
     list-style-type: square;
     margin-left: 20px;
+}
+
+#projects {
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  margin: 40px auto;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#projects h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.project h3 {
+  margin-bottom: 10px;
+  color: #34495e;
 }
 
 /* Footer Styling */
